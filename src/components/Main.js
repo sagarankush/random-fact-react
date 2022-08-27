@@ -4,15 +4,17 @@ import styles from './Main.module.css';
 
 export default function Main(){
   // const [factId, setFactId] = useState(-1);
-  let srText = "Press Enter to get Next"
+  // let srText = "Press Enter to get Next"
   // let srElement= <span className='sr-only'></span>
   const [fact, setFact] = useState("");
+  const [srText, setSrText] = useState("Press Enter to get Next");
   // const [srButtonInfo, setSrButtonInfo] = useState(srText);
 
   const newFact = () => {
     axios.get("https://uselessfacts.jsph.pl/random.json?language=en")
       .then((response) => {
         setFact(response.data.text);
+        setSrText("Press Enter to get Next");
         // setFactId(response.data.id);
       })
       .catch((error) => {
@@ -23,10 +25,6 @@ export default function Main(){
   useEffect(() => {
     newFact();
   }, []);
-
-  useEffect(() => {
-    srText = "Press Enter to get Next"
-  }, [fact]);
 
   return (
     <>
