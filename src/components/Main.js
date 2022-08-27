@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './Main.module.css';
 
 export default function Main(){
-  const [factId, setFactId] = useState(-1);
+  // const [factId, setFactId] = useState(-1);
   const [fact, setFact] = useState("");
 
   const newFact = () => {
@@ -11,7 +11,7 @@ export default function Main(){
       .then((response) => {
         console.log(response.data.text);
         setFact(response.data.text);
-        setFactId(response.data.id);
+        // setFactId(response.data.id);
       })
       .catch((error) => {
         console.log(error);
