@@ -12,6 +12,7 @@
     justify-content: center;
 }
 .factContainer{
+    /* overflow: auto; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,10 +27,14 @@
     padding: 20px;
 }
 .fact{
+    max-width: 50vw;
+    max-height: 80vh;
+    overflow: auto;
     text-align: justify;
     color: darkslategray;
 }
 .newButton{
+    padding: 10px 20px;
     cursor: pointer;
     background-color: darkslategray;
     border: 0;
@@ -39,6 +44,9 @@
     min-width: 128px;
 }
 .newButton:hover{
+    background-color: #1c2f2f;
+}
+.newButton:focus{
     background-color: #1c2f2f;
 }
 .newButton:active{
