@@ -1,6 +1,6 @@
 .container{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('C:\Users\ankus\Projects\test-app\public\bg.jpg');
-    /* background-repeat: no-repeat; */
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), 
+        url('public\bg.jpg');
     background-size: cover;
     position: fixed;
     top: 0;
