@@ -9,7 +9,6 @@ export default function Main(){
   const newFact = () => {
     axios.get("https://uselessfacts.jsph.pl/random.json?language=en")
       .then((response) => {
-        console.log(response.data.text);
         setFact(response.data.text);
         // setFactId(response.data.id);
       })
